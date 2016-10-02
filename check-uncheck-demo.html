@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+ * @author	Suraj Kaushik
+ * @url 	www.unitrai.com
+ * @license	https://www.gnu.org/licenses/gpl-3.0.en.html 
+ * @git 	https://github.com/mistersuraj/jquery_check_all_checkbox
+ * @version	1.0.0
+ * @Description "Document Shows the use of Jquery code to check Un Check Check boxes"
+ * @author Note " Anyone can use the code it in any possible way. No need to worry about license "
+-->
+<html>
+    <head>
+        <title>Document Shows the use of Jquery code to check Un Check Check boxes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 
+            I am using jquery from CDN, you can use it from your local computer as per your preference.
+        -->
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+       
+       <!-- 
+          this the code which does the actual work 
+          copy paste this code in your App to get this functionality.
+       -->
+       <script>   
+                $(document).ready(function(){
+                    $("#masterCheckBox").click(function(){
+                        $(".checkbox").prop('checked',$(this).prop('checked'));
+                    });
+                    $(".checkbox").click(function(){
+                        if($(".checkbox").length === $(".checkbox:checked").length) {
+                                $("#masterCheckBox").prop("checked", true);
+                        } else {
+                                $("#masterCheckBox").prop("checked", false);
+                        }
+                    });     
+                });
+        </script>
+        <!-- //code ends; -->
+    </head>
+    <body>
+        <div><big><input type="checkbox" id="masterCheckBox" > Check Me to Check All My Slaves </big></div>
+        <div> <input type="checkbox" class="checkbox" > check box 1 </div>
+        <div> <input type="checkbox" class="checkbox" > check box 2 </div>
+        <div> <input type="checkbox" class="checkbox" > check box 3 </div>
+        <div> <input type="checkbox" class="checkbox" > check box 4 </div>
+        <div> <input type="checkbox" class="checkbox" > check box 5 </div>
+        <div> <input type="checkbox" class="checkbox" > check box 6 </div>
+        <div> <input type="checkbox" class="checkbox" > check box 7 </div>
+        <div> <input type="checkbox" class="checkbox" > check box 8 </div>
+        <div> <input type="checkbox" class="checkbox" > check box 9</div>
+        <div> <input type="checkbox" class="checkbox" > check box 10 </div>
+        
+    </body>
+</html>
